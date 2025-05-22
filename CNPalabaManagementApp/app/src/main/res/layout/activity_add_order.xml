@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddOrder">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="40dp">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="Add New Order"
+            android:textColor="@color/dark_color"
+            android:textFontWeight="400"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/closeOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/x" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:id="@+id/fullServiceSelector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/textviewAndViewContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Full Service"
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="400"
+                    android:textSize="20dp" />
+
+                <View
+                    android:id="@+id/fullServiceUnderline"
+                    android:layout_width="match_parent"
+                    android:layout_height="2.5dp"
+                    android:background="@color/light_red" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/selfServiceSelector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/textviewAndViewContainer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Self Service"
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="400"
+                    android:textSize="20dp" />
+
+                <View
+                    android:id="@+id/selfServiceUnderline"
+                    android:layout_width="match_parent"
+                    android:layout_height="2.5dp"
+                    android:background="@color/light_red" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout13"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Services"
+                android:fontFamily="@font/inter"
+                android:textFontWeight="400"
+                android:textSize="20dp"
+                android:textColor="@color/dark_color"
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:id="@+id/servicesCheckboxes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <CheckBox
+                    android:id="@+id/superwashCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Superwash"
+                    android:textFontWeight="200"
+                    android:textSize="14dp"
+                    android:buttonTint="@color/dark_color"/>
+
+                <CheckBox
+                    android:id="@+id/dryCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dry"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="200"
+                    android:textSize="14dp"
+                    android:buttonTint="@color/dark_color"/>
+
+                <CheckBox
+                    android:id="@+id/foldCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fold"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="200"
+                    android:textSize="14dp"
+                    android:buttonTint="@color/dark_color"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add-ons"
+                android:fontFamily="@font/inter"
+                android:textFontWeight="400"
+                android:textSize="20dp"
+                android:textColor="@color/dark_color"
+                android:layout_marginTop="20dp"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/arielCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/dark_color"
+                    android:fontFamily="@font/inter"
+                    android:text="Ariel (65g)"
+                    android:paddingStart="5dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="200"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/btnArielMinus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—"
+                        android:textSize="16dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp" />
+
+                    <TextView
+                        android:id="@+id/arielQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:fontFamily="@font/inter"
+                        android:textFontWeight="400"
+                        android:textColor="@color/dark_color"
+                        android:textSize="16dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/btnArielPlus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="18dp"/>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/downyCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/dark_color"
+                    android:fontFamily="@font/inter"
+                    android:text="Downy (45ml)"
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="200"
+                    android:paddingStart="5dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/btnDownyMinus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—"
+                        android:textSize="16dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"/>
+
+                    <TextView
+                        android:id="@+id/downyQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:fontFamily="@font/inter"
+                        android:textFontWeight="400"
+                        android:textColor="@color/dark_color"
+                        android:textSize="16dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/btnDownyPlus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="18dp"/>
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Load Type"
+                android:fontFamily="@font/inter"
+                android:textFontWeight="400"
+                android:textSize="20dp"
+                android:textColor="@color/dark_color"
+                android:layout_marginTop="20dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/loadTypeRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!-- Regular Clothes -->
+                    <RadioButton
+                        android:id="@+id/regularLoadType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/dark_color"
+                        android:fontFamily="@font/inter"
+                        android:text="Regular Clothes"
+                        android:textColor="@color/dark_color"
+                        android:textFontWeight="200" />
+
+                    <!-- Heavy Items -->
+                    <RadioButton
+                        android:id="@+id/heavyItemsLoadType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/dark_color"
+                        android:fontFamily="@font/inter"
+                        android:text="Heavy Items"
+                        android:textColor="@color/dark_color"
+                        android:textFontWeight="200" />
+
+                    <!-- Small Comforters -->
+                    <RadioButton
+                        android:id="@+id/smallComforterLoadType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/dark_color"
+                        android:fontFamily="@font/inter"
+                        android:text="Small Comforters"
+                        android:textColor="@color/dark_color"
+                        android:textFontWeight="200" />
+
+                    <!-- Large Comforters -->
+                    <RadioButton
+                        android:id="@+id/largeComforterLoadType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/dark_color"
+                        android:fontFamily="@font/inter"
+                        android:text="Medium/Large Comforters"
+                        android:textColor="@color/dark_color"
+                        android:textFontWeight="200" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="end">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:text="8kg"
+                        android:textColor="@color/dark_color"
+                        android:textFontWeight="300" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:text="5kg"
+                        android:textColor="@color/dark_color"
+                        android:textFontWeight="300" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:text="2pcs"
+                        android:textColor="@color/dark_color"
+                        android:textFontWeight="300" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:text="1pc"
+                        android:textColor="@color/dark_color"
+                        android:textFontWeight="300" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Information"
+                android:fontFamily="@font/inter"
+                android:textFontWeight="400"
+                android:textSize="20dp"
+                android:textColor="@color/dark_color"
+                android:layout_marginTop="0dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:layout_editor_absoluteX="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Name"
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="200"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/CustomerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="200"
+                    android:textColor="@color/dark_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:layout_editor_absoluteX="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Contact Number"
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="200"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/CustomerContactNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="200"
+                    android:textColor="@color/dark_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:layout_editor_absoluteX="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Email"
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="200"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/CustomerEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="200"
+                    android:textColor="@color/dark_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:layout_editor_absoluteX="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Note"
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="200"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/OrderNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Add customer note"
+                    android:inputType="textMultiLine"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="200"
+                    android:textColor="@color/dark_color"/>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Total: "
+                    android:textColor="@color/dark_color"
+                    android:textFontWeight="400"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/orderTotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="250"
+                    android:textColor="@color/light_red"
+                    android:textFontWeight="400"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_red"
+                    android:fontFamily="@font/inter_24pt_semibold"
+                    android:padding="10dp"
+                    android:text="Add New Order"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="20dp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

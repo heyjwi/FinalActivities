@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:padding="4dp">
+
+    <!-- First Employee Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEmployee1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        android:maxLines="2"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageEmployee1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/gabriel_pfp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToOutline="true"
+                    android:background="@drawable/three_red">
+
+                    <TextView
+
+                        android:id="@+id/tvEmployeeName1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:maxLines="2"
+                        android:fontFamily="@font/inter"
+                        android:textFontWeight="400"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:padding="9dp"/>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- First Employee Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEmployee2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        android:maxLines="2"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageEmployee2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/divine_pfp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToOutline="true"
+                    android:background="@drawable/three_red">
+
+                    <TextView
+                        android:id="@+id/tvEmployeeName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:maxLines="2"
+                        android:fontFamily="@font/inter"
+                        android:textFontWeight="400"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:padding="9dp"/>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

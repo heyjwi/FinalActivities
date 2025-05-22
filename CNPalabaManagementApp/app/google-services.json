@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "675579795723",
+    "project_id": "cn-palaba-managment-app",
+    "storage_bucket": "cn-palaba-managment-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675579795723:android:1493813f0390906da8aa0e",
+        "android_client_info": {
+          "package_name": "com.example.cnpalabamanagementapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUK40xaxRY3jf3ISTOi10IuvPAmeuYJpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675579795723:android:9eb17799c36025daa8aa0e",
+        "android_client_info": {
+          "package_name": "com.example.cnpalabbamanagementapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUK40xaxRY3jf3ISTOi10IuvPAmeuYJpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

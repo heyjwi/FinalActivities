@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/dashbaord_selectors"
+        android:title="" />
+    <item
+        android:id="@+id/nav_orders"
+        android:icon="@drawable/orders_selectors"
+        android:title="" />
+    <item
+        android:id="@+id/nav_employees"
+        android:icon="@drawable/eployee_selectors"
+        android:title="" />
+    <item
+        android:id="@+id/nav_tasks"
+        android:icon="@drawable/task_selectors"
+        android:title="" />
+    <item
+        android:id="@+id/nav_reports"
+        android:icon="@drawable/reports_selectors"
+        android:title="" />
+</menu>

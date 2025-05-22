@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="branch_options">
+        <item>Main Branch</item>
+        <item>CNSC Branch</item>
+        <item>Magang Branch</item>
+        <item>Talisay Branch</item>
+    </string-array>
+</resources>

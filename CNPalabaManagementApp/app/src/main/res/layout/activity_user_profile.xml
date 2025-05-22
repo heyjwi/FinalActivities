@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:background="@drawable/rounded_bottom_mask"
+                android:clipToOutline="true"
+                android:elevation="8dp"
+                android:layout_margin="0dp"
+                android:padding="0dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/three_red" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="51dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/inter"
+                        android:text="My Profile"
+                        android:textColor="@color/white"
+                        android:textFontWeight="400"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/backButton_adminProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="52dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginBottom="69dp"
+                        android:background="@drawable/circle_white_stroke"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView2">
+
+                        <ImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:clipToOutline="true"
+                            android:outlineProvider="background"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/profile_user" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/profile_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center_horizontal"
+                        android:text="Username"
+                        android:textColor="@color/white"
+                        android:textFontWeight="200"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basic Information"
+                android:fontFamily="@font/inter"
+                android:textFontWeight="400"
+                android:textSize="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="100"
+                    android:textSize="12dp"
+                    android:layout_marginStart="15dp"/>
+
+
+                <EditText
+                    android:id="@+id/full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:paddingBottom="17dp"
+                    android:paddingTop="13dp"
+                    android:text="Gabriel R. de la Cruz"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="200"
+                    android:textColor="@color/dark_color"
+                    android:enabled="false"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="15dp"/>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="100"
+                    android:textSize="12dp"
+                    android:layout_marginStart="15dp"/>
+
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:paddingBottom="17dp"
+                    android:paddingTop="13dp"
+                    android:text="heji042918@gmail.com"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="200"
+                    android:textColor="@color/dark_color"
+                    android:enabled="false"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="15dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Number"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="100"
+                    android:textSize="12dp"
+                    android:layout_marginStart="15dp"/>
+
+
+                <EditText
+                    android:id="@+id/contact_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:paddingBottom="17dp"
+                    android:paddingTop="13dp"
+                    android:text="09603633106"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="200"
+                    android:textColor="@color/dark_color"
+                    android:enabled="false"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="15dp"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Branch"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="100"
+                    android:textSize="12dp"
+                    android:layout_marginStart="15dp"/>
+
+
+                <EditText
+                    android:id="@+id/branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:paddingBottom="17dp"
+                    android:paddingTop="13dp"
+                    android:textSize="16dp"
+                    android:text="CNSC Branch"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="200"
+                    android:textColor="@color/dark_color"
+                    android:enabled="false"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="100"
+                    android:textSize="12dp"
+                    android:layout_marginStart="15dp"/>
+
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:paddingBottom="17dp"
+                    android:paddingTop="13dp"
+                    android:text="Lot 16, Block 5, Metropark Village, Phase 1, Brgy. Magang, Daet Camarines Norte."
+                    android:textSize="16dp"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="200"
+                    android:textColor="@color/dark_color"
+                    android:enabled="false"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="15dp"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:fontFamily="@font/inter"
+                android:textFontWeight="400"
+                android:textSize="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="Turn Notifications On/Off"
+                    android:textColor="@color/dark_color"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="100"
+                    android:layout_marginStart="13dp"/>
+
+                <Switch
+                    android:id="@+id/notification_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="Language"
+                    android:textColor="@color/dark_color"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="100"
+                    android:layout_marginStart="13dp"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/language_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/baseline_arrow_drop_down_24"
+                    android:layout_marginEnd="23dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="Contact Support"
+                    android:textColor="@color/dark_color"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="100"
+                    android:layout_marginStart="13dp"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/baseline_phone_enabled_24"
+                    android:layout_marginEnd="23dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="Reprot a problem"
+                    android:textColor="@color/dark_color"
+                    android:fontFamily="@font/inter"
+                    android:textFontWeight="100"
+                    android:layout_marginStart="13dp"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/report_problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/baseline_report_gmailerrorred_24"
+                    android:layout_marginEnd="23dp"/>
+
+
+            </LinearLayout>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="13dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="60dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_red"
+                    android:fontFamily="@font/inter_24pt_semibold"
+                    android:padding="10dp"
+                    android:text="Logout"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="20dp" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

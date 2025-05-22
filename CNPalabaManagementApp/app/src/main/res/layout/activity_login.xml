@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    tools:layout_editor_absoluteX="5dp"
+    tools:layout_editor_absoluteY="55dp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cn_palaba_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:fontFamily="@font/inter_24pt_semibold"
+        android:text="Account Login"
+        android:textColor="@color/dark_color"
+        android:textSize="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"/>
+
+    <EditText
+        android:id="@+id/login_pass_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:fontFamily="@font/inter"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:paddingBottom="20dp"
+        android:textFontWeight="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_user_input"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:drawablePadding="5dp"/>
+
+    <EditText
+        android:id="@+id/login_user_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="115dp"
+        android:ems="10"
+        android:fontFamily="@font/inter"
+        android:hint="Enter Username"
+        android:inputType="text"
+        android:paddingBottom="20dp"
+        android:textFontWeight="100"
+        app:layout_constraintBottom_toTopOf="@+id/login_forgot_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawablePadding="5dp"/>
+
+    <TextView
+        android:id="@+id/login_forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/inter"
+        android:text="Forgot Password?"
+        android:textColor="@color/dark_color"
+        android:textFontWeight="100"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="120dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_red"
+            android:fontFamily="@font/inter_24pt_semibold"
+            android:padding="10dp"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="20dp" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

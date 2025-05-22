@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Notification Icon -->
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/notification_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/message_notif"
+            android:scaleType="centerCrop"/>
+
+        <!-- Notification Content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:fontFamily="@font/inter"
+                android:textFontWeight="400"
+                android:textColor="@color/dark_color"
+                android:id="@+id/notification_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:text="Subject"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:fontFamily="@font/inter"
+                android:textFontWeight="100"
+                android:textColor="@color/dark_color"
+                android:text="content"
+                android:id="@+id/notification_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/notification_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="2days ago"
+                android:textColor="@color/light_red"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <!-- Read/Unread Indicator -->
+        <View
+            android:id="@+id/notification_indicator"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:background="@drawable/unopened"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
